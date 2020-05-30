@@ -44,7 +44,7 @@ import { Request, Response } from 'express';
     try{
       const filteredImage = await filterImageFromURL(image_url);
       res.sendFile(filteredImage)
-      deleteLocalFiles(filteredImage)
+      deleteLocalFiles([filteredImage])
     }
     catch(e){
       res.status(500).send(`There was an issue with your request. ${e}`)
