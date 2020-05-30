@@ -47,9 +47,9 @@ import { Request, Response } from 'express';
       deleteLocalFiles(filteredImage)
     }
     catch(e){
-      res.status('500').send(`There was an issue with your request. ${e}`)
+      res.status(500).send(`There was an issue with your request. ${e}`)
     }
-    
+
   })
 
   // Start the Server
