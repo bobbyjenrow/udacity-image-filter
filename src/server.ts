@@ -46,7 +46,7 @@ import { Request, Response } from 'express';
       res..status(200).sendFile(filteredImage, ()=>{deleteLocalFiles([filteredImage])})
     }
     catch(e){
-      res.status(500).send(`There was an issue with your request. ${e}`)
+      res.status(422).send(`There was an issue with your request. ${e}`)
     }
 
   })
